@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_SkillEffect_GrassGolem_Dark_PartnerSkill_Charge_HPP
+#define UE4SS_SDK_BP_SkillEffect_GrassGolem_Dark_PartnerSkill_Charge_HPP
+
+class ABP_SkillEffect_GrassGolem_Dark_PartnerSkill_Charge_C : public ABP_SkillEffect_GrassGolem_PartnerSkill_Charge_C
+{
+}; // Size: 0x440
+
+#endif

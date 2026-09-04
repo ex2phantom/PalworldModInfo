@@ -1,0 +1,66 @@
+#ifndef UE4SS_SDK_ABP_StuffedShark_Implementation_HPP
+#define UE4SS_SDK_ABP_StuffedShark_Implementation_HPP
+
+struct FAnimBlueprintGeneratedConstantData : public FAnimBlueprintConstantData
+{
+    FName __NameProperty_80;                                                          // 0x0004 (size: 0x8)
+    FName __NameProperty_81;                                                          // 0x000C (size: 0x8)
+    FName __NameProperty_82;                                                          // 0x0014 (size: 0x8)
+    FName __NameProperty_83;                                                          // 0x001C (size: 0x8)
+    FName __NameProperty_84;                                                          // 0x0024 (size: 0x8)
+    FName __NameProperty_85;                                                          // 0x002C (size: 0x8)
+    FName __NameProperty_86;                                                          // 0x0034 (size: 0x8)
+    FName __NameProperty_87;                                                          // 0x003C (size: 0x8)
+    FName __NameProperty_88;                                                          // 0x0044 (size: 0x8)
+    FAnimNodeFunctionRef __StructProperty_89;                                         // 0x0050 (size: 0x20)
+    FName __NameProperty_90;                                                          // 0x0070 (size: 0x8)
+    FName __NameProperty_91;                                                          // 0x0078 (size: 0x8)
+    FAnimSubsystem_PropertyAccess AnimBlueprintExtension_PropertyAccess;              // 0x0080 (size: 0x80)
+    FAnimSubsystem_Base AnimBlueprintExtension_Base;                                  // 0x0100 (size: 0x18)
+
+}; // Size: 0x118
+
+class UABP_StuffedShark_Implementation_C : public UPalAnimInstance
+{
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x06E0 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_PropertyAccess;                     // 0x06E8 (size: 0x8)
+    FAnimSubsystemInstance AnimBlueprintExtension_Base;                               // 0x06F0 (size: 0x8)
+    FAnimNode_Root AnimGraphNode_Root_8;                                              // 0x06F8 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_8;                        // 0x0718 (size: 0xC8)
+    FAnimNode_Root AnimGraphNode_Root_7;                                              // 0x07E0 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_7;                        // 0x0800 (size: 0xC8)
+    FAnimNode_Root AnimGraphNode_Root_6;                                              // 0x08C8 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_6;                        // 0x08E8 (size: 0xC8)
+    FAnimNode_Root AnimGraphNode_Root_5;                                              // 0x09B0 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_5;                        // 0x09D0 (size: 0xC8)
+    FAnimNode_Root AnimGraphNode_Root_4;                                              // 0x0A98 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_4;                        // 0x0AB8 (size: 0xC8)
+    FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace_1;     // 0x0B80 (size: 0x20)
+    FAnimNode_ModifyBone AnimGraphNode_ModifyBone_1;                                  // 0x0BA0 (size: 0x128)
+    FAnimNode_ModifyBone AnimGraphNode_ModifyBone;                                    // 0x0CC8 (size: 0x128)
+    FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace_1;     // 0x0DF0 (size: 0x20)
+    FAnimNode_Root AnimGraphNode_Root_3;                                              // 0x0E10 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_3;                        // 0x0E30 (size: 0xC8)
+    FAnimNode_Root AnimGraphNode_Root_2;                                              // 0x0EF8 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_2;                        // 0x0F18 (size: 0xC8)
+    FAnimNode_LookAt AnimGraphNode_LookAt;                                            // 0x0FE0 (size: 0x250)
+    FAnimNode_ConvertLocalToComponentSpace AnimGraphNode_LocalToComponentSpace;       // 0x1230 (size: 0x20)
+    FAnimNode_ConvertComponentToLocalSpace AnimGraphNode_ComponentToLocalSpace;       // 0x1250 (size: 0x20)
+    FAnimNode_Root AnimGraphNode_Root_1;                                              // 0x1270 (size: 0x20)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose_1;                        // 0x1290 (size: 0xC8)
+    FAnimNode_LinkedInputPose AnimGraphNode_LinkedInputPose;                          // 0x1358 (size: 0xC8)
+    FAnimNode_Root AnimGraphNode_Root;                                                // 0x1420 (size: 0x20)
+    FPalCustomAnimOverrideData CustomData;                                            // 0x1440 (size: 0x50)
+    FVector LookAtWorldLocation;                                                      // 0x1490 (size: 0x18)
+
+    void CustomOverride(FPoseLink PrePose, FPalCustomAnimOverrideData CustomData, FPoseLink& CustomOverride);
+    void AimingOverride(FPoseLink DefaultPose, FRotator AimRotator, FPoseLink& AimingOverride);
+    void LookAtOverride(FPoseLink InPose, FVector LookAtWorldLocation, FPoseLink& LookAtOverride);
+    void UpperOverride(FPoseLink NativePose, FPoseLink ActionPose, FPoseLink& UpperOverride);
+    void AnimGraph(FPoseLink& AnimGraph);
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_StuffedShark_Implementation_AnimGraphNode_ModifyBone_2A1546A2428664E889609C8BC8C956B2();
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_StuffedShark_Implementation_AnimGraphNode_ModifyBone_739716A541441342FE67EA84A8E4EE6D();
+    void ExecuteUbergraph_ABP_StuffedShark_Implementation(int32 EntryPoint);
+}; // Size: 0x14A8
+
+#endif

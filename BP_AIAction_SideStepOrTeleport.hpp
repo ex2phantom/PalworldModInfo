@@ -1,0 +1,32 @@
+#ifndef UE4SS_SDK_BP_AIAction_SideStepOrTeleport_HPP
+#define UE4SS_SDK_BP_AIAction_SideStepOrTeleport_HPP
+
+class UBP_AIAction_SideStepOrTeleport_C : public UPalAIActionBase
+{
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0138 (size: 0x8)
+    double SideStepProbability;                                                       // 0x0140 (size: 0x8)
+    double TeleProbability;                                                           // 0x0148 (size: 0x8)
+    class APalCharacter* SelfActor;                                                   // 0x0150 (size: 0x8)
+    class UPalActionBase* PlayAction;                                                 // 0x0158 (size: 0x8)
+    double TeleportTargetDistance;                                                    // 0x0160 (size: 0x8)
+
+    void GetSideStepLocation(bool IsRight, FVector& StepLocation);
+    void ActTeleport(FVector CurrentLocation, FVector TargetLocation);
+    void TeleportActionBindProcess(class UPalActionBase* action);
+    void GetTeleportActionClass(bool& Success, TSubclassOf<class UPalActionBase>& Value);
+    void AfterTeleportAction();
+    void TeleportFailedAction();
+    void GetSideStepPlayAction(bool IsRight, TSubclassOf<class UPalActionBase>& actionClass);
+    void GetSideStepPlayMontage(bool IsRight, class UAnimMontage*& Montage);
+    void FindSideStepLocation(FVector& Location, bool& CanStep, bool& IsRight);
+    void ActionStart(class APawn* ControlledPawn);
+    void OnChildActionFinished(class UPawnAction* action, TEnumAsByte<EPawnActionResult::Type> WithResult);
+    void ActionAbort(class APawn* ControlledPawn);
+    void ActionFinished(class APawn* ControlledPawn, TEnumAsByte<EPawnActionResult::Type> WithResult);
+    void ActionPause(class APawn* ControlledPawn);
+    void ActionTick(class APawn* ControlledPawn, float DeltaSeconds);
+    void OnActionEnd();
+    void ExecuteUbergraph_BP_AIAction_SideStepOrTeleport(int32 EntryPoint);
+}; // Size: 0x168
+
+#endif

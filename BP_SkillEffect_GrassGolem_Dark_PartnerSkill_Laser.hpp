@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BP_SkillEffect_GrassGolem_Dark_PartnerSkill_Laser_HPP
+#define UE4SS_SDK_BP_SkillEffect_GrassGolem_Dark_PartnerSkill_Laser_HPP
+
+class ABP_SkillEffect_GrassGolem_Dark_PartnerSkill_Laser_C : public ABP_SkillEffect_GrassGolem_PartnerSkill_Laser_C
+{
+}; // Size: 0x448
+
+#endif
